@@ -11,11 +11,22 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-between w-full h-28 ">
+      <div className="mb-40 flex flex-col items-center justify-between w-full h-28 ">
         <div>If the club is not in Middle East</div>
         <div>
           <Link className="bg-black text-white p-4" href={"/stripe"}>
             Stripe Payment (Existing Payment)
+          </Link>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-between w-full h-28 ">
+        <div>TAP Business Account (For Our Clubs)</div>
+        <div>
+          <Link
+            className="bg-black text-white p-4"
+            href={"/tap-business-account"}
+          >
+            Create a business account
           </Link>
         </div>
       </div>
