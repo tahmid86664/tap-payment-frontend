@@ -150,7 +150,7 @@ const Form = () => {
           <h2 className="text-2xl mb-4">Step 1: Customer Information</h2>
 
           <label className="block mb-2">
-            Name:
+            Company Name:
             <input
               type="text"
               name="name"
@@ -161,7 +161,7 @@ const Form = () => {
           </label>
 
           <label className="block mb-2">
-            Type:
+            Company Type:
             <div className="mt-1">
               <label className="inline-block mr-4">
                 <input
@@ -189,7 +189,7 @@ const Form = () => {
           </label>
 
           <label className="block mb-2">
-            Legal Name:
+            Legal Company Name:
             <input
               type="text"
               name="legalName"
