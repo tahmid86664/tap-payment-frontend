@@ -17,9 +17,29 @@ const Form = () => {
     isNonProfit: "",
     country: "",
     taxNumber: "",
+    // commercial reg
     commercialRegistrationFile: null,
+    commercialRegistrationFileId: "",
+    commercialRegistrationNumber: "",
+    commercialRegistrationIssuingCountry: "",
+    commercialRegistrationIssuingDate: "",
+    commercialRegistrationExpiryDate: "",
+
+    // commercial license
     commercialLicenseFile: null,
+    commercialLicenseFileId: "",
+    commercialLicenseNumber: "",
+    commercialLicenseIssuingCountry: "",
+    commercialLicenseIssuingDate: "",
+    commercialLicenseExpiryDate: "",
+
+    // trademark
     trademarkDocumentFile: null,
+    trademarkDocumentFileId: "",
+    trademarkDocumentNumber: "",
+    trademarkDocumentIssuingCountry: "",
+    trademarkDocumentIssuingDate: "",
+    trademarkDocumentExpiryDate: "",
 
     // * second step
     iban: "",
@@ -264,7 +284,7 @@ const Form = () => {
             />
           </label>
 
-          <label className="block mb-2">
+          <label className="block mb-4">
             Tax Number:
             <input
               type="text"
@@ -276,37 +296,151 @@ const Form = () => {
           </label>
 
           {/* File Input for Commercial Registration */}
-          <label className="block mb-2">
-            Commercial Registration:
-            <input
-              type="file"
-              name="commercialRegistrationFile"
-              onChange={handleChange}
-              className="mt-1 p-2 block w-full rounded-md border border-gray-300"
-            />
-          </label>
+          <div className="mb-8">
+            <label className="block mb-2">
+              Commercial Registration:
+              <input
+                type="file"
+                name="commercialRegistrationFile"
+                onChange={handleChange}
+                className="mt-1 p-2 block w-full rounded-md border border-gray-300"
+              />
+            </label>
+            <div className="flex">
+              <input
+                type="text"
+                name="commercialRegistrationNumber"
+                value={formData.commercialRegistrationNumber}
+                onChange={handleChange}
+                placeholder="Number"
+                className="mt-1 p-2 w-1/2 rounded-md border border-gray-300"
+              />
+              <input
+                type="text"
+                name="commercialRegistrationIssuingCountry"
+                value={formData.commercialRegistrationIssuingCountry}
+                onChange={handleChange}
+                placeholder="Issuing Country"
+                className="mt-1 p-2 flex-1 ml-2 rounded-md border border-gray-300"
+              />
+            </div>
+            <div className="flex">
+              <input
+                type="date"
+                name="commercialRegistrationIssuingDate"
+                value={formData.commercialRegistrationIssuingDate}
+                onChange={handleChange}
+                placeholder="Issuing Date"
+                className="mt-1 p-2 w-1/2 rounded-md border border-gray-300"
+              />
+              <input
+                type="date"
+                name="commercialRegistrationExpiryDate"
+                value={formData.commercialRegistrationExpiryDate}
+                onChange={handleChange}
+                placeholder="Expiry Date"
+                className="mt-1 p-2 flex-1 ml-2 rounded-md border border-gray-300"
+              />
+            </div>
+          </div>
 
           {/* File Input for Commercial License */}
-          <label className="block mb-2">
-            Commercial License:
-            <input
-              type="file"
-              name="commercialLicenseFile"
-              onChange={handleChange}
-              className="mt-1 p-2 block w-full rounded-md border border-gray-300"
-            />
-          </label>
+          <div className="mb-8">
+            <label className="block mb-2">
+              Commercial License:
+              <input
+                type="file"
+                name="commercialLicenseFile"
+                onChange={handleChange}
+                className="mt-1 p-2 block w-full rounded-md border border-gray-300"
+              />
+            </label>
+            <div className="flex">
+              <input
+                type="text"
+                name="commercialLicenseNumber"
+                value={formData.commercialLicenseNumber}
+                onChange={handleChange}
+                placeholder="Number"
+                className="mt-1 p-2 w-1/2 rounded-md border border-gray-300"
+              />
+              <input
+                type="text"
+                name="commercialLicenseIssuingCountry"
+                value={formData.commercialLicenseIssuingCountry}
+                onChange={handleChange}
+                placeholder="Issuing Country"
+                className="mt-1 p-2 flex-1 ml-2 rounded-md border border-gray-300"
+              />
+            </div>
+            <div className="flex">
+              <input
+                type="date"
+                name="commercialLicenseIssuingDate"
+                value={formData.commercialLicenseIssuingDate}
+                onChange={handleChange}
+                placeholder="Issuing Date"
+                className="mt-1 p-2 w-1/2 rounded-md border border-gray-300"
+              />
+              <input
+                type="date"
+                name="commercialLicenseExpiryDate"
+                value={formData.commercialLicenseExpiryDate}
+                onChange={handleChange}
+                placeholder="Expiry Date"
+                className="mt-1 p-2 flex-1 ml-2 rounded-md border border-gray-300"
+              />
+            </div>
+          </div>
 
           {/* File Input for Trademark Document */}
-          <label className="block mb-2">
-            Trademark Document:
-            <input
-              type="file"
-              name="trademarkDocumentFile"
-              onChange={handleChange}
-              className="mt-1 p-2 block w-full rounded-md border border-gray-300"
-            />
-          </label>
+          <div className="mb-2">
+            <label className="block mb-2">
+              Trademark Document:
+              <input
+                type="file"
+                name="trademarkDocumentFile"
+                onChange={handleChange}
+                className="mt-1 p-2 block w-full rounded-md border border-gray-300"
+              />
+            </label>
+            <div className="flex">
+              <input
+                type="text"
+                name="trademarkDocumentNumber"
+                value={formData.trademarkDocumentNumber}
+                onChange={handleChange}
+                placeholder="Number"
+                className="mt-1 p-2 w-1/2 rounded-md border border-gray-300"
+              />
+              <input
+                type="text"
+                name="trademarkDocumentIssuingCountry"
+                value={formData.trademarkDocumentIssuingCountry}
+                onChange={handleChange}
+                placeholder="Issuing Country"
+                className="mt-1 p-2 flex-1 ml-2 rounded-md border border-gray-300"
+              />
+            </div>
+            <div className="flex">
+              <input
+                type="date"
+                name="trademarkDocumentIssuingDate"
+                value={formData.trademarkDocumentIssuingDate}
+                onChange={handleChange}
+                placeholder="Issuing Date"
+                className="mt-1 p-2 w-1/2 rounded-md border border-gray-300"
+              />
+              <input
+                type="date"
+                name="trademarkDocumentExpiryDate"
+                value={formData.trademarkDocumentExpiryDate}
+                onChange={handleChange}
+                placeholder="Expiry Date"
+                className="mt-1 p-2 flex-1 ml-2 rounded-md border border-gray-300"
+              />
+            </div>
+          </div>
 
           <button
             type="button"
