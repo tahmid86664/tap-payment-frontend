@@ -136,6 +136,13 @@ const Form = () => {
     }
   };
 
+  const uploadFile = () => {
+    try {
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="w-full max-w-[50%] mx-auto">
       {currentStep === 1 && (
